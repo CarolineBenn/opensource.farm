@@ -1,18 +1,147 @@
 body {
   margin: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: white;
 }
 
-a {
-  color: #00B7FF;
+h1, h2, h3, h4, h5, h6 {
+  color: #555;
+  text-align: center;
 }
 
-.one-hundred {
-  width: 100%;
-  background: #efefef;
+p { text-align: justify; }
+a { color: #00B7FF; }
+li { list-style: none; }
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
+/* Pushy menu */
+.menu-btn a          { color: #555; }
+.menu-btn a:hover    { color: #222; }
+.pushy               { background: #efefef; box-shadow: none; }
+.pushy ul            { margin-left: 0; }
+.pushy ul li a       { color: #777; }
+.pushy ul li a:hover { background: #777; color: white; }
+.pushy-active .site-overlay { background-color: rgba(0, 0, 0, 0.2); }
+
+i.fa.fa-bars  { 
+  font-size: 2em; 
+  padding: 0.5em 1.5em;
+}
+
+.row {
+  margin-bottom: 1em;
+}
 
 section.one-hundred {
   padding: 3em 0;
 }
+
+.one-hundred {
+  width: 100%;
+}
+
+.odd {
+  background: rgba(106,188,101,0.3);
+}
+
+.even {
+  background: rgba(254,205,205,0.3);
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+section.page-header { background: rgba(156,188,205,0.3); padding: 1.414em 0 }
+section.page-header .row { margin-bottom: 0 }
+
+/* header.ejs */
+#container > div { display: inline-block; }
+#container h1 {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* footer.ejs */
+section#footer {
+  background: #555;
+  padding: 3em;
+  color: #d6d6d6;
+}
+
+section#footer .row { margin-bottom: 0; }
+section#footer p    { margin-bottom: 0; font-size: 0.8em; }
+section#footer .social-links i  { float: right; margin-left: 10px; font-size: 1.2em; color: #d6d6d6; }
+section#footer .social-links a:hover i { color: #fff; }
+
+
+
+/* index.ejs */
+#main-image {
+  background-image: url('../images/wheelbarrow.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 400px;
+}
+
+#main-image h1, h4 {
+  color: white;
+  text-shadow: 1px 2px 2px #222;
+}
+
+
+#join-us-at-the-farm h2 {
+  text-align: center;
+}
+
+#join-us-at-the-farm h5 {
+  display: inline;
+  text-align: center;
+}
+
+#join-us-at-the-farm {
+
+}
+
+/* projects.ejs */
+#projects
+
+
+/* life-on-the-farm.ejs */
+.life-on-the-farm .row {
+  margin-bottom: 0;
+}
+
+.life-on-the-farm p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

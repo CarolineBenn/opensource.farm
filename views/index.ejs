@@ -1,24 +1,63 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/foundation.min.css' />
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/foundation.min.js"></script>
-  </head>
-  <body>
-    <%- include('partials/_header.ejs') %>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+<section id="main-image" class="one-hundred odd">
+  <div class="row vertical-align">
+    <div class="medium-12 columns">
+      <h1>opensource.farm</h1>
+      <h4>Something about the farm, lalala</h4>
+    </div>
+  </div>
+</section>
 
-    <section class="one-hundred">
-      <div class="row">
-        <div class="medium-12 columns">
-        Here is a thing
-        </div>
+<section id="join-us-at-the-farm" class="one-hundred even">
+  <div class="row">
+    <div class="small-12 columns heading">
+      <h2>Join us at the farm</h2> 
+      <a><h5>Discover</h5></a> |    
+      <a><h5>Create</h5></a> |
+      <a><h5>Collaborate</h5></a>   
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 columns">
+      <img src="/images/farmbot.jpg" alt="Farm Bot" title="CNC Farm Bot">
+    </div>
+    <div class="medium-6 columns">
+      <h3>Something</h3>
+      <p>Here is some stuff you can do</p>
+    </div>
+  </div>
+</section>
+
+<section id="featured-projects" class="one-hundred odd">
+  <div id="overlay-effect" class="effects clearfix">
+    <div class="row">
+      <div class="small-12 columns heading">
+        <h2>Featured Projects</h2>
       </div>
-    </section>
+    </div>
+    <div class="row">
+      <div class="medium-6 columns">
+        <div class="img">
+          <img src="images/farmbot.jpg" alt="FarmBot">
+          <div class="overlay">
+            <a  class="expand">Blah blah</a>
+            <a class="close-overlay hidden">x</a>
+          </div>
+        </div>
+        <h2>Project title</h2>
+        <h5>Short synopsis</h5>
+      </div>
+      <div class="medium-6 columns">
+        <div class="img">
+          <img src="images/farmbot.jpg" alt="FarmBot">
+          <div class="overlay">
+            <a  class="expand">Blah blah</a>
+            <a class="close-overlay hidden">x</a>
+          </div>
+        </div>
+        <h2>Project title</h2>
+        <h5>Short synopsis</h5>
+      </div>
+    </div>
+  </div>
+</section>
 
-  </body>
-</html>
