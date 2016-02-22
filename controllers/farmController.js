@@ -13,9 +13,13 @@ function getAllProjects(req, res){
   res.render('projects.ejs', { title: 'Projects' });
 }
 
+function viewProject(req, res){
+  res.render('single.ejs', { title: 'Single project' })
+}
 
 module.exports = {
   home: home,
   lifeOnTheFarm: lifeOnTheFarm,
-  getAllProjects: getAllProjects
+  getAllProjects: getAllProjects,
+  viewProject: viewProject
 }

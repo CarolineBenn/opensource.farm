@@ -3,7 +3,7 @@
   GLOBAL
 ============================================================ */
 .effects {
-  padding-left: 15px;
+
 }
 .effects .img {
   position: relative;
@@ -63,6 +63,7 @@ a.expand {
   line-height: 50px;
   font-weight: 700;
   font-size: 1em;
+  word-wrap: break-word;
 }
 
 

@@ -60,6 +60,10 @@ section.one-hundred {
 
 section.page-header { background: rgba(156,188,205,0.3); padding: 1.414em 0 }
 section.page-header .row { margin-bottom: 0 }
+.page-header { text-align: center, color: #555; text-shadow: none }
+
+.align-left { text-align: left }
+
 
 /* header.ejs */
 #container > div { display: inline-block; }
@@ -67,6 +71,9 @@ section.page-header .row { margin-bottom: 0 }
   text-align: center;
   margin: 0 auto;
 }
+
+
+
 
 /* footer.ejs */
 section#footer {
@@ -90,7 +97,7 @@ section#footer .social-links a:hover i { color: #fff; }
   height: 400px;
 }
 
-#main-image h1, h4 {
+#main-image h1, #main-image h4 {
   color: white;
   text-shadow: 1px 2px 2px #222;
 }
@@ -109,8 +116,13 @@ section#footer .social-links a:hover i { color: #fff; }
 
 }
 
+
+
+
 /* projects.ejs */
-#projects
+#all-projects h3, h5 {
+  text-align: left;
+}
 
 
 /* life-on-the-farm.ejs */
@@ -122,15 +134,128 @@ section#footer .social-links a:hover i { color: #fff; }
   margin-bottom: 0;
 }
 
+/* profile.ejs */
+.profile-header {
+  text-align: center;
+}
+
+section#profile-page img#user-photo {
+  margin-bottom: 1em;
+}
+
+section#profile-page h1, section#profile-page h2, section#profile-page h3, section#profile-page h4, section#profile-page h5, section#profile-page h6 {
+  text-align: left;
+}
+
+.find-me-elsewhere a {
+  display: block;
+}
+
+.find-me-elsewhere a i {
+  width: 15px;
+}
+
+@media (max-width: 640px){
+  .find-me-elsewhere {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  .find-me-elsewhere a {
+    display: inline;
+  }
+}
 
 
 
+/* single.ejs */
+
+section#project-meta p {
+color: #aaa;
+font-size: 0.75em;
+}
+
+
+.team-members a {
+  display: block;
+}
+
+@media(max-width: 640px){
+  .team-members {
+    margin-bottom: 1em;
+  }
+  a.github-link i.fa.fa-github {
+    margin-bottom: 1em;
+  }
+}
+
+.single-project h1, .single-project h2, .single-project h3, .single-project h4, .single-project h5, .single-project h6 {
+  text-align: left;
+}
+
+img#project-main-photo {
+  margin-bottom: 0.6em;
+}
+
+#project-photo-thumbnails {
+  margin-bottom: 1em;
+}
+
+#project-photo-thumbnails .small-4.columns:nth-child(1){
+  padding-right: 0;
+}
+
+#project-photo-thumbnails .small-4.columns:nth-child(2){
+  padding-left: 0.45rem;
+  padding-right: 0.45rem;
+}
+
+#project-photo-thumbnails .small-4.columns:nth-child(3){
+  padding-left: 0;
+}
 
 
 
+#project-info h4 {
+  text-transform: uppercase;
+  font-size: 1em;
+  text-decoration: underline;
+}
 
+section#project-components ul {
+  margin-left: 0.5em;  
+}
 
+section#project-components ul li {
+  margin-bottom: 1em;
+}
 
+section#project-components ul li p {
+  margin-bottom: 0;
+}
+
+section#project-components span {
+  font-size: 0.75em;
+}
+
+section#project-share a {
+  font-size: 2em;
+}
+
+section#project-discussion h6 {
+  margin-top: 0;
+  display: inline
+}
+
+section#project-discussion h6.post-time {
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+
+section#project-discussion .row.comment {
+  margin-bottom: 1em;
+}
 
 
 
