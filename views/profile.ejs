@@ -1,7 +1,8 @@
 <section id="profile" class="one-hundred odd page-header">
     <div class="row">
       <div class="medium-12 columns">
-        <h2 class="page-header">User Profile Template</h2>
+        <h2 class="page-header"><%= user.local.firstname %></h2>
+        <h2 class="page-header"><%= user.local.username %></h2>
         <h4 class="page-header">Occupation</h4>
         <h6 class="page-header"><i class="fa fa-map-marker"></i> Ealing, London</h6>
       </div>
@@ -27,7 +28,7 @@
       <div class="medium-8 columns">
         <div class="users-projects">  
           <div class="img">
-            <img src="images/farmbot.jpg" alt="FarmBot">
+            <img src="/images/farmbot.jpg" alt="FarmBot">
             <div class="overlay">
               <a class="expand">Project synopsis</a>
               <a class="close-overlay hidden">x</a>
@@ -36,11 +37,12 @@
           <h3>Project title</h3>
           <h5>[Project authors list]</h5>
         </div>
+        <hr>
         <div class="users-projects">  
           <div class="img">
-            <img src="images/farmbot.jpg" alt="FarmBot">
+            <img src="/images/farmbot.jpg" alt="FarmBot">
             <div class="overlay">
-              <a  class="expand">Project synopsis</a>
+              <a class="expand">Project synopsis</a>
               <a class="close-overlay hidden">x</a>
             </div>
           </div>

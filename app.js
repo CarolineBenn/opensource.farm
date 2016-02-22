@@ -4,6 +4,8 @@ var path           = require('path');
 var morgan         = require('morgan');
 var bodyParser     = require('body-parser');
 var cookieParser   = require('cookie-parser');
+var jwt            = require('jsonwebtoken');
+var expressJWT     = require('express-jwt');
 var session        = require('express-session')
 var methodOverride = require("method-override");
 var passport       = require('passport');
@@ -43,7 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // This will be uncommented once Passport is set up:
  
  app.use(passport.initialize());
- //app.use(passport.session());
+ // app.use(passport.session());
 
 
 
