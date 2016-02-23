@@ -1,11 +1,85 @@
-<section ng-show="users.checkLoggedIn()">
+<section id="profile" class="one-hundred odd page-header">
   <div class="row">
-    <div class="col-sm-6 col-md-4">
-      <img ng-src="{{ users.user.local.image }}">
-      <div class="caption">
-        <h3>{{ users.user.local.fullname | uppercase }}</h3>
-        <p>{{ users.user.local.email }}</p>
-      </div>
+    <div class="medium-12 columns">
+      <h2 class="page-header">{{ users.user.local.username }}</h2>
+      <h6 class="page-header"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;{{ users.user.local.location }}</h6>
     </div>
   </div>
+</section>  
+
+
+<section class="odd" style="height:100px">
+    {{ users.user.projects._id }}
 </section>
+
+<div id="overlay-effect" class="effects clearfix">
+<section id="profile-page" class="one-hundred even">
+  
+    <div class="row">
+      <div class="medium-4 columns">
+        <img class="user-photo" ng-src="{{ users.user.local.image }}" alt="userphoto" title="{{ users.user.local.username }}'s Profile Photo">
+        <h6>About Me</h6>
+        <p>{{ users.user.local.aboutme }}</p>
+        <div class="find-me-elsewhere">
+          <a href="http://github.com/{{ users.user.local.github }}" target="_blank"><i class="fa fa-github"></i> {{ users.user.local.github }}</a>
+          <a href="http://twitter.com/{{ users.user.local.twitter }}" target="_blank"><i class="fa fa-twitter"></i> {{ users.user.local.twitter }}</a>
+          <a href="http://facebook.com/{{ users.user.local.facebook }}" target="_blank"><i class="fa fa-facebook"></i> {{ users.user.local.facebook }}</a>
+          <a href="mailto:{{ users.user.local.email }}?Subject=Hello%20{{ users.user.local.firstname }}"><i class="fa fa-envelope"></i> {{ users.user.local.email }}</a>
+        </div>
+      </div>
+
+      <div class="medium-8 columns">
+        <div class="users-projects">  
+          <div class="img">
+            <img src="/images/farmbot.jpg" alt="FarmBot">
+            <div class="overlay">
+              <a class="expand">Project synopsis</a>
+              <a class="close-overlay hidden">x</a>
+            </div>
+          </div>
+          <h3>Project title</h3>
+          <h5>[Project authors list]</h5>
+        </div>
+        <hr>
+        <div class="users-projects">  
+          <div class="img">
+            <img src="/images/farmbot.jpg" alt="FarmBot">
+            <div class="overlay">
+              <a class="expand">Project synopsis</a>
+              <a class="close-overlay hidden">x</a>
+            </div>
+          </div>
+          <h3>Project title</h3>
+          <h5>[Project authors list]</h5>
+        </div>
+        <hr>
+
+        <!--
+        <div class="row projects-contributed-to">
+          <div class="medium-6 columns">
+            <div class="img">
+              <img src="images/farmbot.jpg" alt="FarmBot">
+              <div class="overlay">
+                <a  class="expand">Project synopsis</a>
+                <a class="close-overlay hidden">x</a>
+              </div>
+            </div>
+          </div>
+          <div class="medium-6 columns">
+            <div class="img">
+              <img src="images/tracrr.jpg" alt="FarmBot">
+              <div class="overlay">
+                <a  class="expand">Project synopsis</a>
+                <a class="close-overlay hidden">x</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        -->
+
+      </div>
+
+    </div>
+
+</section>
+</div>

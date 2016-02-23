@@ -22,17 +22,22 @@ angular
         url: "/register",
         templateUrl: "./js/views/register.html"
       })
-      .state('profile', {
-        url: "/profile",
-        templateUrl: "./js/views/profile.html"
-      })
       .state('users', {
         url: "/users",
         templateUrl: "./js/views/users.html"
       })
+      .state('profile', {
+        url: "/users/:id",
+        templateUrl: "./js/views/profile.html"
+      })
       .state('projects', {
         url: "/projects",
         templateUrl: "./js/views/projects.html",
+        controller: "ProjectsController as projects"
+      })
+      .state('single', {
+        url: "/projects/:id",
+        templateUrl: "./js/views/single.html",
         controller: "ProjectsController as projects"
       })
       .state('addproject', {

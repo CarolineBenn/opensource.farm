@@ -1,3 +1,4 @@
+<!--
 <ul class="media-list">
   <li class="media" ng-repeat="user in users.all">
     <div class="media-left">
@@ -11,11 +12,12 @@
     </div>
   </li>
 </ul>
+-->
 
 <div class="row">
-  <div class="medium-4 columns"ng-repeat="user in users.all">
+  <div class="medium-4 columns" ng-repeat="user in users.all">
     <a href="#" ui-sref="profile">
-    <img ng-src="{{ user.local.image }}">
+      <img ng-src="{{ user.local.image }}">
     </a>
   </div>
 </div>

@@ -19,7 +19,7 @@ function UsersController(User, TokenService, $state, CurrentUser){
 
   function getUsers() {
     User.query(function(data){
-      console.log(data)
+      // console.log(data)
       self.all = data;
     });
   }
@@ -31,6 +31,7 @@ function UsersController(User, TokenService, $state, CurrentUser){
       $state.go('home');
     }
     self.user = TokenService.decodeToken();
+    console.log(self.user)
     CurrentUser.saveUser(self.user);
   }
 

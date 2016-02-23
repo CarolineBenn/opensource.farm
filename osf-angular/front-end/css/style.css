@@ -139,7 +139,7 @@ section#footer .social-links a:hover i { color: #fff; }
   text-align: center;
 }
 
-section#profile-page img#user-photo {
+section#profile-page img.user-photo {
   margin-bottom: 1em;
 }
 
