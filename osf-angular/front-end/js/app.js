@@ -27,7 +27,7 @@ angular
         templateUrl: "./js/views/users.html"
       })
       .state('profile', {
-        url: "/users/:id",
+        url: "/users/:username",
         templateUrl: "./js/views/profile.html"
       })
       .state('projects', {

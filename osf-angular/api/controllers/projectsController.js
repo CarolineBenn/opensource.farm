@@ -24,8 +24,9 @@ function projectsCreate(req, res){
 
 function projectsShow(req, res){
   var id = req.params.id;
-
+  console.log(req.params.id)
   Project.findById({ _id: id }, function(err, project) {
+    console.log(project)
     if (err) return res.status(500).send(err);
     if (!project) return res.status(404).send(err);
     res.status(200).send(project);

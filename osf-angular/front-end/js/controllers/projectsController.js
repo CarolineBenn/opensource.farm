@@ -2,8 +2,8 @@ angular
   .module('logging')
   .controller('ProjectsController', ProjectsController);
 
-ProjectsController.$inject = ["Project", "User", "$state", "CurrentUser"];
-function ProjectsController(Project, User, $state, CurrentUser){
+ProjectsController.$inject = ["Project", "User", "$state", "CurrentUser", "$stateParams"];
+function ProjectsController(Project, User, $state, CurrentUser, $stateParams){
   var self = this;
 
   self.all      = [];
@@ -16,6 +16,12 @@ function ProjectsController(Project, User, $state, CurrentUser){
     });
   };
 
+  self.getProject = function(){
+    Project.get({ id: $stateParams.id }, function(data){
+      self.project = data;
+    })
+  }
+
   self.getUsers = function(){
     User.query(function(data){
        self.users = data;
@@ -24,7 +30,7 @@ function ProjectsController(Project, User, $state, CurrentUser){
 
   self.add = function(){
     var project = { project: self.project };
-    console.log(project);
+
     Project.save(project, function(data){
       self.all.push(data);
       self.project = {};
@@ -33,5 +39,6 @@ function ProjectsController(Project, User, $state, CurrentUser){
   };
 
   self.getProjects();
+  self.getProject();
   self.getUsers();
 }

@@ -8,7 +8,10 @@ function usersIndex(req, res) {
 }
 
 function usersShow(req, res){
-  User.findById(req.params.id, function(err, user){
+  var id = req.params.id;
+  console.log(req.params.id)
+  User.findById(req.params.id).populate('projects').exec(function(err, user){
+    console.log(user)
     if (err) return res.status(404).json({message: 'Something went wrong.'});
     res.status(200).json({ user: user });
   });

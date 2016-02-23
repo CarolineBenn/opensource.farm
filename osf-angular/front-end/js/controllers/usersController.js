@@ -3,8 +3,8 @@ angular
   .controller('UsersController', UsersController);
 
 // Here we inject the currentUser service to access the current user
-UsersController.$inject = ['User', 'TokenService', '$state', 'CurrentUser'];
-function UsersController(User, TokenService, $state, CurrentUser){
+UsersController.$inject = ['User', 'TokenService', '$state', 'CurrentUser', '$stateParams'];
+function UsersController(User, TokenService, $state, CurrentUser, $stateParams){
 
   var self = this;
 
@@ -12,6 +12,7 @@ function UsersController(User, TokenService, $state, CurrentUser){
   self.user          = {};
   self.error         = null;
   self.getUsers      = getUsers;
+  self.showUser      = showUser;
   self.register      = register;
   self.login         = login;
   self.logout        = logout;
@@ -22,6 +23,14 @@ function UsersController(User, TokenService, $state, CurrentUser){
       // console.log(data)
       self.all = data;
     });
+  }
+
+  function showUser(){
+    User.get({ id: $stateParams.id }, function(data){
+      console.log("***")
+      console.log(data)
+      self.user = data;
+    })
   }
 
   function handleLogin(res) {
