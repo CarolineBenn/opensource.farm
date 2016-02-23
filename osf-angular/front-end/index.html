@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="logging">
+<head>
+  <title>opensource.farm</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="./css/foundation.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/pushy.css">
+  <link rel="stylesheet" type="text/css" href="./css/overlay.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+  <script src="./js/includes/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-messages.js"></script>
+  <script src="./js/includes/angular-ui-router.min.js"></script>
+  <script src="./js/includes/angular-jwt.js"></script>
+  <script src="./js/includes/angular-resource.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/services/tokenService.js"></script>
+  <script src="./js/services/authInterceptor.js"></script>
+  <script src="./js/services/currentUser.js"></script>
+  <script src="./js/models/user.js"></script>
+  <script src="./js/models/project.js"></script>
+  <script src="./js/controllers/usersController.js"></script>
+  <script src="./js/controllers/projectsController.js"></script>
+  
+  <script src="./js/includes/jquery.min.js"></script>
+  <script src="./js/includes/pushy.min.js"></script>
+  <script src="./js/includes/foundation.min.js"></script>
+  <script src="./js/includes/vendor/modernizr.js"></script>
+  <script src="./js/includes/main.js"></script> 
+
+</head>
+
+
+<body ng-controller="UsersController as users">
+
+<header>
+  <nav class="pushy pushy-left">
+    <ul>
+      <li><a href="#" ui-sref="home">Home</a></li>
+      <li><a href="#"><i class="fa fa-search"></i></a></li>
+      <li ng-show="users.checkLoggedIn()">
+        <a href="#" ui-sref="addproject">Add New Project</a>
+      </li>
+      <li><a href="#" ui-sref="projects">All Projects</a></li>
+
+      <li><a href="#" ui-sref="users">Users</a></li>
+      <li><a href="#" ui-sref="lifeonthefarm">Life on the Farm</a></li>
+
+      <li ng-show="users.checkLoggedIn()">
+        <a href=# ui-sref="profile">Your Profile</a>
+      </li>
+      <li ng-hide="users.checkLoggedIn()">
+        <a href="#" ui-sref="login">Login</a>
+      </li>
+      <li ng-hide="users.checkLoggedIn()">
+        <a href="#" ui-sref="register">Register</a>
+      </li>
+      <li ng-show="users.checkLoggedIn()">
+        <a href="#"ui-sref="home" ng-click="users.logout()">Logout</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="site-overlay"></div>
+
+  <div id="container">
+    <div class="menu-btn">
+      <a><i class="fa fa-bars"></i></a>
+    </div>
+    <div class="top-bar-title">
+      <a href="#" ui-sref-active="active" ui-sref="home"><h1>opensource.farm</h1></a>
+    </div>
+  </div>
+</header>
+
+  <main class="container" ui-view></main>
+
+<script type="text/javascript">
+  $(document).foundation();
+</script>
+</body>
+</html>

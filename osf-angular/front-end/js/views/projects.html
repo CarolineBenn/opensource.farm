@@ -1,0 +1,13 @@
+<section class="one-hundred page-header">
+  <h2>Projects</h2>
+</section>
+<section id="all-projects" class="one-hundred">
+  <div class="row">
+    <div class="medium-4 columns" ng-repeat="project in projects.all"> 
+      <a href="#" ui-sref=""> 
+        <img ng-src="{{ project.photos }}">
+        <h4>{{ project.title }}</h4>
+      </a>
+    </div>
+  </div>
+</section> 

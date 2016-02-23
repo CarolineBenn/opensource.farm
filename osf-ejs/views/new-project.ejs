@@ -1,0 +1,25 @@
+<section class="page-header">
+  <div class="row">
+    <div class="small-12 columns">
+      <h2>Add New Project</h2>
+    
+      <form id="new-project" action="/api/category" method="post">
+        <label>Topic</label>
+        <input type='text' id="thread-topic" name="thread[topic]" value="" readonly>
+        
+        <!--
+        <br>
+        <label>Thread title:</label>
+        <input type="text" id="thread-title" name="thread[title]" value="" placeholder="Title">
+        <br>
+        <label>Body:</label>
+        <textarea name="thread[body]" id="thread-body" value="" placeholder="What do you want to say?"></textarea>
+        <br>
+        -->
+        
+        <input type="submit" value="Submit" id="submit-new-thread">
+      </form>
+
+    </div>
+  </div>
+</section>

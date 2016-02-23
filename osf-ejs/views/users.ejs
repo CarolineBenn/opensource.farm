@@ -1,0 +1,29 @@
+<section class="one-hundred page-header">
+  <div class="row">
+    <div class="medium-12 columns">
+      <h2 class="page-header">All Users</h2>
+    </div>
+  </div>
+</section>
+
+<% for(i = 0; i < users.length; i++) { %>
+    <span><%= users[i].local.firstname %> </span>
+    <span><%= users[i].local.surname %></span>  
+<% } %>
+
+
+<section id="all-users" class="one-hundred odd">
+  <div class="row">
+
+    <div class="medium-4 columns">
+      <img src="/images/tracrr.jpg" alt="userphoto" title="User's Profile Photo">
+    </div>
+    <div class="medium-4 columns">
+      <img src="/images/wheelbarrow.jpg" alt="userphoto" title="User's Profile Photo">
+    </div>
+    <div class="medium-4 columns">
+      <img src="/images/tracrr.jpg" alt="userphoto" title="User's Profile Photo">
+    </div>
+
+  </div>
+</section>  
