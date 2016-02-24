@@ -12,7 +12,8 @@ angular
     $stateProvider
       .state('home', {
         url: "/",
-        templateUrl: "./js/views/home.html"
+        templateUrl: "./js/views/home.html",
+        
       })
       .state('login', {
         url: "/login",

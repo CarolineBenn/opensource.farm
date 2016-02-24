@@ -32,11 +32,11 @@ function projectsShow(req, res){
       console.log(project)
       if (err) return res.status(500).send(err);
       if (!project) return res.status(404).send(err);
-      res.status(200).send(project);
+      res.status(200).send("project");
   });
 }
 
-/* HMMMMMMM */
+/* HMMMMMMM..? */
 function editProject(req, res){
   Project.findById({_id: id}, function(err, project){
     res.render('editproject')

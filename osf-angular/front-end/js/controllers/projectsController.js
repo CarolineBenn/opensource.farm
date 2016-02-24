@@ -40,7 +40,10 @@ function ProjectsController(Project, User, $state, CurrentUser, $stateParams){
     });
   };
 
+  self.edit = function(){
+    
+  }
+
   self.getProjects();
-  self.getProject();
   self.getUsers();
 }

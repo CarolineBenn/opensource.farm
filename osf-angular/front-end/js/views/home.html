@@ -6,7 +6,6 @@
     </div>
   </div>
 </section>
-{{ users.user.projects }}
 
 <section id="join-us-at-the-farm" class="one-hundred even">
   <div class="row">
@@ -28,63 +27,22 @@
   </div>
 </section>
 
-<section ng-controller="ProjectsController as projects" id="featured-projects" class="one-hundred odd">
-  <div id="overlay-effect" class="effects clearfix">
+<section id="featured-projects" class="one-hundred odd">
+  <!-- <div id="overlay-effect" class="effects clearfix"> -->
     <div class="row">
       <div class="small-12 columns heading">
         <h2>Featured Projects</h2>
       </div>
     </div>
-
-
-    <div class="row">
-      <div class="medium-6 columns">
-        <div class="img">       
-          <img ng-src="{{ projects.all[0].photos }}">
-          <div class="overlay">
-            <a  class="expand">{{ projects.all[0].title }}</a>
-            <a class="close-overlay hidden">x</a>
-          </div>
-        </div>
+    <div class="row" ng-controller="ProjectsController as projects">
+     
+      <div class="medium-6 columns" ng-repeat="project in projects.all | limitTo: 2">
+        {{ project.title }}
+        <img ng-src="{{ project.photos }}">
       </div>
       <div class="medium-6 columns">
-        <div class="img">       
-          <img ng-src="{{ projects.all[1].photos }}">
-          <div class="overlay">
-            <a  class="expand">{{ projects.all[1].title }}</a>
-            <a class="close-overlay hidden">x</a>
-          </div>
-        </div>
-        <h2>Project title</h2>
-        <h5>Short synopsis</h5>
-      </div>
-    </div>    
-
-
-    <div class="row">
-      <div class="medium-6 columns">
-        <div class="img">
-          <img src="images/farmbot.jpg" alt="FarmBot">
-          <div class="overlay">
-            <a  class="expand">Blah blah</a>
-            <a class="close-overlay hidden">x</a>
-          </div>
-        </div>
-        <h2>Project title</h2>
-        <h5>Short synopsis</h5>
-      </div>
-      <div class="medium-6 columns">
-        <div class="img">
-          <img src="images/farmbot.jpg" alt="FarmBot">
-          <div class="overlay">
-            <a  class="expand">Blah blah</a>
-            <a class="close-overlay hidden">x</a>
-          </div>
-        </div>
-        <h2>Project title</h2>
-        <h5>Short synopsis</h5>
+        
       </div>
     </div>
-  </div>
 </section>
 
