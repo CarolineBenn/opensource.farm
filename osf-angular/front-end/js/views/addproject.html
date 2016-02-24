@@ -6,14 +6,14 @@
 
   <section class="one-hundred">
     <div class="row">
-      <div class="medium-6 columns">
+      <div class="medium-6 medium-centered columns">
         <form id="add-project" ng-submit="projects.add()" novalidate>
 
           <div class="form-group">
             <label for="user_id">Username</label>
             <select class="form-control" name="user_id" id="user_id" ng-model="projects.project.user_id">
               <option value="{{user._id}}" ng-repeat="user in projects.users" >
-                {{user.local.username}}
+                {{ user.local.username }}
               </option>
             </select>
           </div>

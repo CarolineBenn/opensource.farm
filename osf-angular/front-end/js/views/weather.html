@@ -6,47 +6,53 @@
   </div>
 </section>
 
-<section> 
+<section ng-controller="WeatherController as weather"> 
   <div class="row">
-    <div class="medium-6 medium-centered columns" ng-controller="WeatherController as weather">
-     
+    <div class="medium-12 columns">
+      <h6>Last updated at {{ weather.updated }} at {{ weather.weather.$ / 60 }}:00</h6>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="medium-6 medium-centered columns">
+    
     <table>
       <tbody>
         <tr>
           <td>Weather type</td>
-          <td>___</td>
+          <td>{{ weather.weather.W }}</td>
         </tr>
         <tr>
           <td>Wind Direction</td>
-          <td>___ (compass)</td>
+          <td>{{ weather.weather.D }}</td>
         </tr>
         <tr>
           <td>Wind Speed</td>
-          <td>___ mph</td>
+          <td>{{ weather.weather.S }} mph</td>
         </tr>
         <tr>
           <td>Wind Gust</td>
-          <td>___ mph</td>
+          <td>{{ weather.weather.G }} mph</td>
         </tr>
         <tr>
           <td>Temperature</td>
-          <td>___ *C</td>
+          <td>{{ weather.weather.T }}°C</td>
         </tr>
         <tr>
           <td>Feels like:</td>
-          <td>___ *C</td>
+          <td>{{ weather.weather.F }}°C</td>
         </tr>
         <tr>
           <td>Precipitation</td>
-          <td>___ %</td>
+          <td>{{ weather.weather.Pp }}%</td>
         </tr>
         <tr>
           <td>Visibility</td>
-          <td>___</td>
+          <td>{{ weather.weather.V }}</td>
         </tr>
         <tr>
           <td>Humidity</td>
-          <td>___ %</td>
+          <td>{{ weather.weather.H }}%</td>
         </tr>
       </tbody>
     </table>

@@ -30,15 +30,10 @@
         {{ project.title }}
         </a>          
           
-            <div class="img">
+
               <a ui-sref="single({id: project._id})">
               <img ng-src="{{ project.photos }}" alt="FarmBot">
               </a>
-              <div class="overlay">
-                <a class="expand">{{ project.shortdescription }}</a>
-                <a class="close-overlay hidden"><i class="fa fa-times"></i></a>
-              </div>
-            </div>
             <h3>{{ project.title }}</h3>
           
           
