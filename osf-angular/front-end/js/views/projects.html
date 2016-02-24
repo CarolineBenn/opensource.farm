@@ -3,9 +3,9 @@
 </section>
 
 <section id="all-projects" class="one-hundred">
-  <div class="row">
+  <div class="row" data-equalizer>
     <div id="overlay-effect" class="effects clearfix">
-      <div class="medium-4 columns" ng-repeat="project in projects.all"> 
+      <div class="medium-4 columns" ng-repeat="project in projects.all | reverse" data-equalizer-watch> 
         <a href="#/projects/{{ project._id }}"> 
           <div class="img">
             <img ng-src="{{ project.photos }}">

@@ -59,6 +59,10 @@ angular
       .state('lifeonthefarm', {
         url: "/lifeonthefarm",
         templateUrl: "./js/views/lifeonthefarm.html"
+      })
+      .state('weather', {
+        url: "/weather",
+        templateUrl: "./js/views/weather.html"
       });
 
     $urlRouterProvider.otherwise("/");

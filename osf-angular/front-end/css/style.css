@@ -13,7 +13,7 @@ p { text-align: justify; }
 a { color: #00B7FF; }
 li { list-style: none; }
 
-img { display: block; margin: 0 auto; }
+img { display: block; margin: 0 auto; width: 100%; }
 
 section {
   word-wrap: break-word; 
@@ -131,8 +131,6 @@ section#footer .social-links a:hover i { color: #fff; }
 #join-us-at-the-farm {
 
 }
-
-
 
 
 /* projects.ejs */
