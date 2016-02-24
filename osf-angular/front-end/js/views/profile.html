@@ -1,16 +1,12 @@
-<section id="profile" class="one-hundred odd page-header">
+<section id="profile" class="one-hundred odd page-header" ng-init="users.showUser()">
   <div class="row">
     <div class="medium-12 columns">
       <h2 class="page-header">{{ users.user.local.username }}</h2>
-      <h6 class="page-header"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;{{ users.user.projects }}</h6>
+      <h6 class="page-header"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;{{ users.user.local.location }}</h6>
     </div>
   </div>
 </section>  
 
-
-<section class="odd" style="height:100px">
-    {{ users.user.projects._id }}
-</section>
 
 <div id="overlay-effect" class="effects clearfix">
 <section id="profile-page" class="one-hundred even">
@@ -29,32 +25,21 @@
       </div>
 
       <div class="medium-8 columns">
-        <div class="users-projects">  
-          <div class="img">
-            <img src="/images/farmbot.jpg" alt="FarmBot">
-            <div class="overlay">
-              <a class="expand">Project synopsis</a>
-              <a class="close-overlay hidden">x</a>
+        <div class="users-projects" ng-repeat="project in users.user.projects">  
+          
+          <a ui-sref="single({id: project._id})">
+            <div class="img">
+              <img ng-src="{{ project.photos }}" alt="FarmBot">
+              <div class="overlay">
+                <a class="expand">{{ project.shortdescription }}</a>
+                <a class="close-overlay hidden"><i class="fa fa-times"></i></a>
+              </div>
             </div>
-          </div>
-          <h3>Project title</h3>
-          <h5>[Project authors list]</h5>
+            <h3>{{ project.title }}</h3>
+          </a>
+          
         </div>
-        <hr>
-        <div class="users-projects">  
-          <div class="img">
-            <img src="/images/farmbot.jpg" alt="FarmBot">
-            <div class="overlay">
-              <a class="expand">Project synopsis</a>
-              <a class="close-overlay hidden">x</a>
-            </div>
-          </div>
-          <h3>Project title</h3>
-          <h5>[Project authors list]</h5>
-        </div>
-        <hr>
       </div>
-
     </div>
 
 </section>

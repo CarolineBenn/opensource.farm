@@ -9,7 +9,7 @@ router.post('/login', authenticationsController.login);
 router.post('/register', authenticationsController.register);
 
 router.route('/')
-  .get(usersController.usersIndex)
+  .get(usersController.usersIndex, projectsController.projectsIndex)
  
 router.route('/users')
   .get(usersController.usersIndex)
@@ -26,7 +26,7 @@ router.route('/projects')
 
 router.route('/projects/:id') 
   .get(projectsController.projectsShow)
-  .patch(projectsController.projectsUpdate)
+  .put(projectsController.projectsUpdate)
   .delete(projectsController.projectsDelete)
 
 module.exports = router;

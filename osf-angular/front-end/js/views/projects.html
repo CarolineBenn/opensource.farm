@@ -1,13 +1,22 @@
 <section class="one-hundred page-header">
   <h2>Projects</h2>
 </section>
+
 <section id="all-projects" class="one-hundred">
   <div class="row">
-    <div class="medium-4 columns" ng-repeat="project in projects.all"> 
-      <a href="#/projects/{{ project._id }}"> 
-        <img ng-src="{{ project.photos }}">
-        <h4>{{ project.title }}</h4>
-      </a>
+    <div id="overlay-effect" class="effects clearfix">
+      <div class="medium-4 columns" ng-repeat="project in projects.all"> 
+        <a href="#/projects/{{ project._id }}"> 
+          <div class="img">
+            <img ng-src="{{ project.photos }}">
+            <div class="overlay">
+              <a  class="expand"><h4>{{ project.title }}</h4></a>
+              <a class="close-overlay hidden">x</a>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </section> 
+

@@ -2,18 +2,20 @@ var User   = require('../models/user');
 
 function usersIndex(req, res) {
   User.find(function(err, users){
+    console.log("users")
+    console.log(users)
     if (err) return res.status(404).json({message: 'Something went wrong.'});
     res.status(200).json(users);
   });
 }
 
 function usersShow(req, res){
-  var id = req.params.id;
-  console.log(req.params.id)
-  User.findById(req.params.id).populate('projects').exec(function(err, user){
-    console.log(user)
+  // var username = req.params.username;
+  // console.log(req.params.username)
+  User.findOne({ _id: req.params.id}).populate('projects').exec(function(err, user){
+    console.log(user);
     if (err) return res.status(404).json({message: 'Something went wrong.'});
-    res.status(200).json({ user: user });
+    res.status(200).json(user);
   });
 }
 

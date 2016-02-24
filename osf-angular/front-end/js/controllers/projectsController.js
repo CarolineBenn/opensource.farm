@@ -12,6 +12,7 @@ function ProjectsController(Project, User, $state, CurrentUser, $stateParams){
 
   self.getProjects = function(){
     Project.query(function(data){
+      console.log(data)
       self.all = data;
     });
   };
@@ -19,6 +20,7 @@ function ProjectsController(Project, User, $state, CurrentUser, $stateParams){
   self.getProject = function(){
     Project.get({ id: $stateParams.id }, function(data){
       self.project = data;
+      console.log(data);
     })
   }
 

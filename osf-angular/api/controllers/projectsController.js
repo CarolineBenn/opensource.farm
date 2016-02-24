@@ -3,6 +3,7 @@ var User = require("../models/user");
 
 function projectsIndex(req, res){
   Project.find({}, function(err, projects) {
+    console.log(projects)
     if (err) return res.status(404).send(err);
     res.status(200).send(projects);
   });
@@ -10,7 +11,6 @@ function projectsIndex(req, res){
 
 function projectsCreate(req, res){
   var project = new Project(req.body.project);
-
   project.save(function(err){
     if (err) return res.status(500).send(err);
     var id = req.body.project.user_id;
@@ -25,23 +25,27 @@ function projectsCreate(req, res){
 function projectsShow(req, res){
   var id = req.params.id;
   console.log(req.params.id);
-
   Project.findById({ _id: id })
     .populate('users')
     .exec(function(err, project) {
-      console.log("Project.users:")
-      console.log(project.users)
-
-
+      console.log("Project:")
+      console.log(project)
       if (err) return res.status(500).send(err);
       if (!project) return res.status(404).send(err);
       res.status(200).send(project);
   });
 }
 
+/* HMMMMMMM */
+function editProject(req, res){
+  Project.findById({_id: id}, function(err, project){
+    res.render('editproject')
+  })
+}
+
+
 function projectsUpdate(req, res){
   var id = req.params.id;
-
   Project.findByIdAndUpdate({ _id: id }, req.body.project, function(err, project){
     if (err) return res.status(500).send(err);
     if (!project) return res.status(404).send(err);
@@ -51,7 +55,6 @@ function projectsUpdate(req, res){
 
 function projectsDelete(req, res){
   var id = req.params.id;
-
   Project.remove({ _id: id }, function(err) {
     if (err) return res.status(500).send(err);
     res.status(200).send();

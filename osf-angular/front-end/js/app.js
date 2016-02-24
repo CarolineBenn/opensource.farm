@@ -27,7 +27,7 @@ angular
         templateUrl: "./js/views/users.html"
       })
       .state('profile', {
-        url: "/users/:username",
+        url: "/users/:id",
         templateUrl: "./js/views/profile.html"
       })
       .state('projects', {
@@ -38,6 +38,11 @@ angular
       .state('single', {
         url: "/projects/:id",
         templateUrl: "./js/views/single.html",
+        controller: "ProjectsController as projects"
+      })
+      .state('editproject', {
+        url: "/projects/:id/edit",
+        templateUrl: "./js/views/editproject.html",
         controller: "ProjectsController as projects"
       })
       .state('addproject', {
