@@ -36,12 +36,9 @@
   <div class="row" ng-controller="ProjectsController as projects">
 
     <div class="medium-6 columns" ng-repeat="project in projects.all | reverse | limitTo: 2">
-      {{ project.title }}<br>
-      {{ project.shortdescription }}
+      <a ui-sref="single({id: project._id})">
       <img ng-src="{{ project.photos }}">
-    </div>
-    <div class="medium-6 columns">
-      
+      </a>
     </div>
   </div>
 </section>

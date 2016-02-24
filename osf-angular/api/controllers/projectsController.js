@@ -3,11 +3,29 @@ var User = require("../models/user");
 
 function projectsIndex(req, res){
   Project.find({}, function(err, projects) {
+    console.log("********************")
     console.log(projects)
+    console.log("********************")
+   
     if (err) return res.status(404).send(err);
     res.status(200).send(projects);
   });
 }
+
+function projectsShow(req, res){
+  var id = req.params.id;
+  console.log(req.params.id);
+  Project.findOne({ _id: id })
+    .populate('users')
+    .exec(function(err, project) {
+      console.log("Project:")
+      console.log(project)
+      if (err) return res.status(500).send(err);
+      if (!project) return res.status(404).send(err);
+      res.status(200).send(project);
+  });
+}
+
 
 function projectsCreate(req, res){
   var project = new Project(req.body.project);
@@ -19,20 +37,6 @@ function projectsCreate(req, res){
        user.save();
        return res.status(201).send(project);
     });
-  });
-}
-
-function projectsShow(req, res){
-  var id = req.params.id;
-  console.log(req.params.id);
-  Project.findById({ _id: id })
-    .populate('users')
-    .exec(function(err, project) {
-      console.log("Project:")
-      console.log(project)
-      if (err) return res.status(500).send(err);
-      if (!project) return res.status(404).send(err);
-      res.status(200).send("project");
   });
 }
 

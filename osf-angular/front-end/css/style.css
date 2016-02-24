@@ -1,12 +1,13 @@
 body {
   margin: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Open Sans", Helvetica, Arial, sans-serif;
   background: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #555;
   text-align: center;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
 }
 
 p { text-align: justify; }
@@ -146,6 +147,10 @@ section#footer .social-links a:hover i { color: #fff; }
 
 .life-on-the-farm p:last-child {
   margin-bottom: 0;
+}
+
+.life-on-the-farm ul li {
+  list-style-type: circle;
 }
 
 /* profile.ejs */

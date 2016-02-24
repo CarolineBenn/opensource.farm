@@ -28,8 +28,6 @@ function UsersController(User, TokenService, $state, CurrentUser, $stateParams){
   function showUser(){
   
     User.get({id: $stateParams.id }, function(data){
-      console.log("***")
-      console.log(data)
       self.user = data;
     })
   }

@@ -26,17 +26,21 @@
 
       <div class="medium-8 columns">
         <div class="users-projects" ng-repeat="project in users.user.projects">  
+        <a ui-sref="single({id: project._id})">
+        {{ project.title }}
+        </a>          
           
-          <a ui-sref="single({id: project._id})">
             <div class="img">
+              <a ui-sref="single({id: project._id})">
               <img ng-src="{{ project.photos }}" alt="FarmBot">
+              </a>
               <div class="overlay">
                 <a class="expand">{{ project.shortdescription }}</a>
                 <a class="close-overlay hidden"><i class="fa fa-times"></i></a>
               </div>
             </div>
             <h3>{{ project.title }}</h3>
-          </a>
+          
           
         </div>
       </div>

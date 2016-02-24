@@ -1,109 +1,109 @@
-<section class="one-hundred odd page-header">
+<div ng-init="projects.getProject()">
+
+  <section class="one-hundred odd page-header">
+      <div class="row">
+        <div class="medium-12 columns">
+          <h2 class="page-header">{{ projects.project.title }}</h2>
+          <h4 class="page-header">{{ projects.project.shortdescription }}</h4>
+        </div>
+      </div>
+  </section>  
+  <section class="one-hundred even single-project">
     <div class="row">
-      <div class="medium-12 columns">
-        <h2 class="page-header">{{ projects.project.title }}</h2>
-        <h4 class="page-header">{{ projects.project.shortdescription }}</h4>
-          <!-- <h6 class="page-header"> {{ projects.user.local.firstname }}</h6> -->
-      </div>
-    </div>
-</section>  
+      <div class="medium-4 columns">
+        <img id="project-main-photo" src="{{ projects.project.photos }}" alt="Main project" title="Main project photo">      
+        
+        <div id="project-photo-thumbnails" class="row">
+          <div class="small-4 columns">
+            <img src="/images/tracrr.jpg" alt="Main project" title="Main project photo">
+          </div>
+          <div class="small-4 columns">
+            <img src="/images/tracrr.jpg" alt="Main project" title="Main project photo">
+          </div>
+          <div class="small-4 columns">
+            <img src="/images/tracrr.jpg" alt="Main project" title="Main project photo">
+          </div>
+        </div>
 
-<section class="one-hundred even single-project">
-  <div class="row">
-    <div class="medium-4 columns">
-      <img id="project-main-photo" src="{{ projects.project.photos }}" alt="Main project" title="Main project photo">      
-      
-      <div id="project-photo-thumbnails" class="row">
-        <div class="small-4 columns">
-          <img src="/images/tracrr.jpg" alt="Main project" title="Main project photo">
-        </div>
-        <div class="small-4 columns">
-          <img src="/images/tracrr.jpg" alt="Main project" title="Main project photo">
-        </div>
-        <div class="small-4 columns">
-          <img src="/images/tracrr.jpg" alt="Main project" title="Main project photo">
-        </div>
-      </div>
-
-      <a href="" class="button one-hundred">View gallery</a>
-      
-      <hr class="hide-for-small">
-      
-      <section id="project-meta">  
-        <h6 class="align-left">Meet the Team</h6>
-        <div class="team-members">
-          <a href="#">Team member 01</a>
-          <a href="#">Team member 02</a>
-          <a href="#">Team member 03</a>
-        </div>
-        <hr class="hide-for-small">
-
-        <a href="http://github.com/{{ projects.project.github }}" target="_blank" class="github-link"><i class="fa fa-github"></i> Github</a>
+        <a href="" class="button one-hundred">View gallery</a>
         
         <hr class="hide-for-small">
         
-        <p>This project was created on 22nd Feb 2016</p>  
-      </section>
+        <section id="project-meta">  
+          <h6 class="align-left">Meet the Team</h6>
+          <div class="team-members">
+            <a href="#">Team member 01</a>
+            <a href="#">Team member 02</a>
+            <a href="#">Team member 03</a>
+          </div>
+          <hr class="hide-for-small">
 
-      <hr class="show-for-small">
+          <a href="http://github.com/{{ projects.project.github }}" target="_blank" class="github-link"><i class="fa fa-github"></i> Github</a>
+          
+          <hr class="hide-for-small">
+          
+          <p>This project was created on 22nd Feb 2016</p>  
+        </section>
+
+        <hr class="show-for-small">
+      </div>
+
+      <div id="project-info" class="medium-8 columns">
+
+        <section id="project-description">  
+          <h4>Description</h4>
+          {{ projects.project.longdescription }}
+        </section>
+        <hr>
+        <section id="project-details">
+          <h4 >Details</h4>
+          {{ projects.project.details }}
+        </section>
+        <hr>
+        <section id="project-components">
+          <h4>Components</h4>
+          {{ projects.project.components }}
+            <ul>
+              <li><p>Component name</p><span>Component description</span></li>
+            </ul>
+        </section>
+        <hr>
+        <section id="project-logs">
+          <h4>Logs</h4>
+          {{ projects.project.logs }}
+        </section>
+        <hr>
+        <section id="project-share">
+          <h4>Share this project</h4>
+          <a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+        </section>
+        <hr>
+        <section id="project-discussion">
+          <h4>Discussion</h4>
+          <div class="row comment">
+            <div class="small-2 columns">
+              <img src="/images/tracrr.jpg" alt="profilephoto" title="Profile Photo">
+            </div>
+            <div class="small-10 columns">
+              <h6><a href="">Username</a></h6> <h6 class="post-time">22nd Feb 2016 10:07AM</h6>
+              <p>This is a lovely comment about this project</p>
+            </div>
+          </div>
+          <div class="row comment">
+            <div class="small-2 columns">
+              <img src="/images/tracrr.jpg" alt="profilephoto" title="Profile Photo">
+            </div>
+            <div class="small-10 columns">
+              <h6><a href="">Username</a></h6> <h6 class="post-time">22nd Feb 2016 10:07AM</h6>
+              <p>This is yet another lovely comment about this project</p>
+            </div>
+          </div>
+        </section>
+
+
+      </div>
     </div>
 
-    <div id="project-info" class="medium-8 columns">
-
-      <section id="project-description">  
-        <h4>Description</h4>
-        {{ projects.project.longdescription }}
-      </section>
-      <hr>
-      <section id="project-details">
-        <h4 >Details</h4>
-        {{ projects.project.details }}
-      </section>
-      <hr>
-      <section id="project-components">
-        <h4>Components</h4>
-        {{ projects.project.components }}
-          <ul>
-            <li><p>Component name</p><span>Component description</span></li>
-            <li><p>Component name</p><span>Component description</span></li>
-          </ul>
-      </section>
-      <hr>
-      <section id="project-logs">
-        <h4>Logs</h4>
-        {{ projects.project.logs }}
-      </section>
-      <hr>
-      <section id="project-share">
-        <h4>Share this project</h4>
-        <a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
-        <a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook-square"></i></a>
-      </section>
-      <hr>
-      <section id="project-discussion">
-        <h4>Discussion</h4>
-        <div class="row comment">
-          <div class="small-2 columns">
-            <img src="/images/tracrr.jpg" alt="profilephoto" title="Profile Photo">
-          </div>
-          <div class="small-10 columns">
-            <h6><a href="">Username</a></h6> <h6 class="post-time">22nd Feb 2016 10:07AM</h6>
-            <p>This is a lovely comment about this project</p>
-          </div>
-        </div>
-        <div class="row comment">
-          <div class="small-2 columns">
-            <img src="/images/tracrr.jpg" alt="profilephoto" title="Profile Photo">
-          </div>
-          <div class="small-10 columns">
-            <h6><a href="">Username</a></h6> <h6 class="post-time">22nd Feb 2016 10:07AM</h6>
-            <p>This is yet another lovely comment about this project</p>
-          </div>
-        </div>
-      </section>
-
-
-    </div>
-  </div>
-
-</section>
+  </section>
+</div>

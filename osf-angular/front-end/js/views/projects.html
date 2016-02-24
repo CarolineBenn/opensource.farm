@@ -6,12 +6,11 @@
   <div class="row" data-equalizer>
     <div id="overlay-effect" class="effects clearfix">
       <div class="medium-4 columns" ng-repeat="project in projects.all | reverse" data-equalizer-watch> 
-        <a href="#/projects/{{ project._id }}"> 
+        <a ui-sref="single({id: project._id})">
           <div class="img">
             <img ng-src="{{ project.photos }}">
             <div class="overlay">
-              <a  class="expand"><h4>{{ project.title }}</h4></a>
-              <a class="close-overlay hidden">x</a>
+              xx
             </div>
           </div>
         </a>

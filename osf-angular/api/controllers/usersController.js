@@ -2,8 +2,8 @@ var User   = require('../models/user');
 
 function usersIndex(req, res) {
   User.find(function(err, users){
-    console.log("users")
-    console.log(users)
+    // console.log("users")
+    // console.log(users)
     if (err) return res.status(404).json({message: 'Something went wrong.'});
     res.status(200).json(users);
   });
