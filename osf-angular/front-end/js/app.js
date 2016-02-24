@@ -2,6 +2,11 @@ angular
   .module('logging', ['ngResource', 'angular-jwt', 'ui.router'])
   .constant('API', 'http://localhost:3000/api')
   .config(MainRouter)
+  .filter('reverse', function(){
+    return function(items){
+      return items.slice().reverse();
+    }
+  })
   .config(function($httpProvider){
     $httpProvider.interceptors.push('authInterceptor');
   });

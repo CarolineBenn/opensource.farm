@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="medium-6 columns">
+    <div class="medium-6 columns"> 
       <img src="/images/farmbot.jpg" alt="Farm Bot" title="CNC Farm Bot">
     </div>
     <div class="medium-6 columns">
@@ -28,21 +28,21 @@
 </section>
 
 <section id="featured-projects" class="one-hundred odd">
-  <!-- <div id="overlay-effect" class="effects clearfix"> -->
-    <div class="row">
-      <div class="small-12 columns heading">
-        <h2>Featured Projects</h2>
-      </div>
+  <div class="row">
+    <div class="small-12 columns heading">
+      <h2>Recent Projects</h2>
     </div>
-    <div class="row" ng-controller="ProjectsController as projects">
-     
-      <div class="medium-6 columns" ng-repeat="project in projects.all | limitTo: 2">
-        {{ project.title }}
-        <img ng-src="{{ project.photos }}">
-      </div>
-      <div class="medium-6 columns">
-        
-      </div>
+  </div>
+  <div class="row" ng-controller="ProjectsController as projects">
+
+    <div class="medium-6 columns" ng-repeat="project in projects.all | reverse | limitTo: 2">
+      {{ project.title }}<br>
+      {{ project.shortdescription }}
+      <img ng-src="{{ project.photos }}">
     </div>
+    <div class="medium-6 columns">
+      
+    </div>
+  </div>
 </section>
 
