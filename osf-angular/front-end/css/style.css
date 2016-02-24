@@ -153,6 +153,20 @@ section#footer .social-links a:hover i { color: #fff; }
   list-style-type: circle;
 }
 
+section#the-workspace {
+  background-image: url('../images/workspace.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+section#the-workspace h3 {
+  color: white;
+}
+
 /* profile.ejs */
 .profile-header {
   text-align: center;

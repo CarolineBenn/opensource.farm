@@ -62,7 +62,8 @@ angular
       })
       .state('weather', {
         url: "/weather",
-        templateUrl: "./js/views/weather.html"
+        templateUrl: "./js/views/weather.html",
+        controller: "WeatherController as weather"
       });
 
     $urlRouterProvider.otherwise("/");

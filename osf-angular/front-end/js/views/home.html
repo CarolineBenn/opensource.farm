@@ -37,7 +37,8 @@
 
     <div class="medium-6 columns" ng-repeat="project in projects.all | reverse | limitTo: 2">
       <a ui-sref="single({id: project._id})">
-      <img ng-src="{{ project.photos }}">
+        <img ng-src="{{ project.photos }}">
+        {{ projects.photos }}
       </a>
     </div>
   </div>
