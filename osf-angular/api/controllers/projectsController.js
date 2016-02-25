@@ -18,8 +18,6 @@ function projectsShow(req, res){
   Project.findOne({ _id: id })
     .populate('users')
     .exec(function(err, project) {
-      console.log("Project:")
-      console.log(project)
       if (err) return res.status(500).send(err);
       if (!project) return res.status(404).send(err);
       res.status(200).send(project);
