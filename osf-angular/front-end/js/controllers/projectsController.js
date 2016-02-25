@@ -41,13 +41,14 @@ function ProjectsController(Project, User, $state, CurrentUser, $stateParams){
   };
 
 
-  self.edit = function(){
+  self.updateProject = function(){
     var id = $stateParams.id;
     var project = { project: self.project}
     console.log(self.project)
 
-    Project.update(self.project, function(data){
-      console.log(data)
+    Project.update({id: self.project._id} , project, function(data){
+      
+      self.project = data;
     });
    }
 

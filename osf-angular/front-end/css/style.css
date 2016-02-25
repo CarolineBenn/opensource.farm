@@ -35,11 +35,8 @@ table { width: 100%; border-collapse: collapse; }
 form textarea { height: 150px }
 }
  
-.vertical-align {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
+.vertical-align { position: relative; top: 50%; transform: translateY(-50%); }
+.row.vertical-align { position: relative; top: 50%; transform: translateY(-50%); }
 
 .column+.column:last-child, .columns+.column:last-child, .column+.columns:last-child, .columns+.columns:last-child {
   float: left;

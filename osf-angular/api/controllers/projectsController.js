@@ -50,7 +50,7 @@ function editProject(req, res){
 
 function projectsUpdate(req, res){
   var id = req.params.id;
-  Project.findByIdAndUpdate({ _id: id }, req.body.project, function(err, project){
+  Project.findByIdAndUpdate({ _id: id }, req.body.project,{new:true}, function(err, project){
     if (err) return res.status(500).send(err);
     if (!project) return res.status(404).send(err);
     res.status(200).send(project);
