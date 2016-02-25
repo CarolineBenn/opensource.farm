@@ -55,7 +55,7 @@ app.use(function (err, req, res, next) {
 
 var routes = require('./config/routes');
 app.use("/api", routes);
-app.get('/api',function(req, res){
+app.get('/',function(req, res){
   res.render('index.html.ejs')
 });
 
