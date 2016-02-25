@@ -22,14 +22,18 @@ function WeatherController($http){
       // Gives the latest update time/date:
       self.time = res.data.SiteRep.DV.Location.Period[0].value;  
 
+      // Convert into readable language:
+      console.log(res.data.SiteRep.DV.Location.Period[0].Rep[0].W)
+
+      // if (res.data.SiteRep.DV.Location.Period[0].Rep[0]W == 2) {
+      //   console.log("It's a bit cloudy")
+      // }     
+
       // To get rid of the 'Z' at the end of the date:
       self.updated = self.time.split('')
       self.updated.pop();
       self.updatedTime = self.updated.join('');
-
-      console.log(self.updatedTime)
     });
   }
-
-  getWeather();
+  getWeather();  
 }
