@@ -20,7 +20,7 @@ function ProjectsController(Project, User, $state, CurrentUser, $stateParams){
   self.getProject = function(){
     Project.get({ id: $stateParams.id }, function(data){
       self.project = data;
-      console.log(data)
+      // console.log(data)
     })
   }
 
@@ -40,9 +40,27 @@ function ProjectsController(Project, User, $state, CurrentUser, $stateParams){
     });
   };
 
+
   self.edit = function(){
-    
+    var id = $stateParams.id;
+    var project = { project: self.project}
+    console.log(self.project)
+
+    Project.update(self.project, function(data){
+      console.log(data)
+    });
+   }
+
+
+ self.delete = function(){
+    console.log("delete");
+    var project = { project: self.project };
+    console.log(project.project._id);
+    Project.delete({id: project.project._id })
+    $state.go('home');
   }
+
+
 
   self.getProjects();
   self.getUsers();

@@ -1,8 +1,8 @@
-<section id="main-image" class="one-hundred odd">
+<section id="main-image" class="one-hundred odd animated fadeIn">
   <div class="row vertical-align">
     <div class="medium-12 columns">
       <h1>opensource.farm</h1>
-      <h4>Something about the farm, lalala</h4>
+      <h4 class="main-image-subtitle">Something about the farm, lalala</h4>
     </div>
   </div>
 </section>
@@ -35,7 +35,7 @@
   </div>
   <div class="row" ng-controller="ProjectsController as projects">
 
-    <div class="medium-6 columns" ng-repeat="project in projects.all | reverse | limitTo: 2">
+    <div class="medium-6 columns recent-projects" ng-repeat="project in projects.all | reverse | limitTo: 2">
       <a ui-sref="single({id: project._id})">
         <img ng-src="{{ project.photos }}">
         {{ projects.photos }}
@@ -43,4 +43,18 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

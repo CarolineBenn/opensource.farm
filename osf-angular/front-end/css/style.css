@@ -9,6 +9,8 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
 }
+h3.heading { text-align: center }
+
 
 header { background: #53918C }
 header a h1 { color: white }
@@ -20,6 +22,8 @@ p { text-align: justify; }
 a { /* color: #00B7FF; */ color: #53918C }
 a.button { background: #53918C }
 a.button:hover { background: #9CCDC9 }
+a.button:focus { background: #53918C }
+a.button:active { background: #9CCDC9 }
 li { list-style: none; }
 
 img { display: block; margin: 0 auto; width: 100%; }
@@ -28,6 +32,8 @@ button:hover { background: #9CCDC9 }
 section { word-wrap: break-word; }
 
 table { width: 100%; border-collapse: collapse; }
+form textarea { height: 150px }
+}
  
 .vertical-align {
   position: relative;
@@ -51,7 +57,7 @@ table { width: 100%; border-collapse: collapse; }
 .pushy               { background: #efefef; box-shadow: none; }
 .pushy ul            { margin-left: 0; }
 .pushy ul li a       { color: #777; }
-.pushy ul li a:hover { background: #9CCDC9; color: white; border-bottom: #8BBCB8; border-top: #ADDEDA }
+.pushy ul li a:hover { background: #9CCDC9; color: white; border-top: #ADDEDA }
 .pushy-active .site-overlay { background-color: rgba(0, 0, 0, 0.2); }
 
 i.fa.fa-bars  { 
@@ -120,17 +126,23 @@ section#footer a.email:hover { color: white; }
 
 /* index.html */
 #main-image {
+  background: black;
   background-image: url('../images/wheelbarrow.jpg');
   background-position: center center;
   background-size: cover;
   height: 400px;
+
 }
 
-#main-image h1, #main-image h4 {
+#main-image h1 { 
   color: white;
   text-shadow: 1px 2px 2px #222;
 }
 
+#main-image h4.main-image-subtitle {
+color: #D5F1EF;
+text-shadow: 2px 2px 11px #222;
+}
 
 #join-us-at-the-farm h2 {
   text-align: center;
@@ -144,6 +156,14 @@ section#footer a.email:hover { color: white; }
 #join-us-at-the-farm {
 
 }
+
+@media (max-width: 640px) {
+  section#featured-projects .row .medium-6.columns {
+    margin-bottom: 1em;
+  }
+}
+
+
 
 
 /* projects.html */
@@ -178,6 +198,26 @@ section#the-workspace {
 section#the-workspace h3 {
   color: white;
 }
+
+
+/* users.html */
+section#all-users img.user-image {
+  height: 250px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.medium-4.columns .user {
+  height: 250px;
+  background-position: center center;
+}
+
+@media (max-width: 640px) {
+  .user {
+    margin-bottom: 2em;
+  }
+}
+
 
 /* profile.html */
 .profile-header {

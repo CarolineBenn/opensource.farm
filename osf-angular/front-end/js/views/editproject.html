@@ -1,26 +1,27 @@
-<div ng-show="users.checkLoggedIn()">
+<div ng-show="users.checkLoggedIn()" ng-controller="ProjectsController as projects">
   
   <section class="page-header one-hundred">
     <h2>Edit Project</h2>  
   </section>
 
-  <section class="one-hundred">
+  <section class="one-hundred" ng-init="projects.getProject()">
     <div class="row">
-      <div class="medium-6 columns">
-        <form id="edit-project" ng-submit="projects.edit()" novalidate>
 
-          <div class="form-group">
+      <div class="medium-6 medium-centered columns">
+        <form id="add-project" ng-submit="projects.edit()" novalidate>
+
+          <div class="form-group">  
             <label for="user_id">Username</label>
             <select class="form-control" name="user_id" id="user_id" ng-model="projects.project.user_id">
               <option value="{{user._id}}" ng-repeat="user in projects.users" >
-                {{user.local.username}}
+                {{ user.local.username }}
               </option>
             </select>
           </div>
 
           <div class="form-group">
             <label for="title">Title</label>
-            <input type="text" class="form-control" id="title"  placeholder="Title" ng-model="projects.project.title">
+            <input type="text" class="form-control" id="title" ng-model="projects.project.title">
           </div>
 
 
