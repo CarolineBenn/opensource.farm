@@ -1,3 +1,4 @@
+var ejs            = require('ejs');
 var express        = require('express');
 var cors           = require('cors');
 var path           = require('path');
@@ -16,7 +17,7 @@ var config         = require('./config/config');
 var User           = require('./models/user');
 var secret         = require('./config/config').secret;
 
-mongoose.connect(config.database);
+mongoose.connect(process.env.MONGOLAB_URI || config.database);
 
 require('./config/passport')(passport);
 
@@ -34,6 +35,8 @@ app.use(cookieParser());
 app.use(morgan('dev'));
 app.use(cors());
 app.use(passport.initialize());
+app.use('/static', express.static(__dirname + '/public'));
+app.set('view engine', ejs);
 
 app.use('/api', expressJWT({ secret: secret })
   .unless({
@@ -52,5 +55,10 @@ app.use(function (err, req, res, next) {
 
 var routes = require('./config/routes');
 app.use("/api", routes);
+app.get('/api',function(req, res){
+  res.render('index.html.ejs')
+});
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
+
+
