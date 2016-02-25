@@ -1,6 +1,6 @@
 angular
   .module('logging', ['ngResource', 'angular-jwt', 'ui.router'])
-  .constant('API', 'http://localhost:3000/api')
+  .constant('API', '/api')
   .config(MainRouter)
   .filter('reverse', function(){
     return function(items){
