@@ -47,7 +47,9 @@
 
         <hr class="show-for-small">
 
-       <button ng-click="projects.delete()" class="one-hundred">Delete</button>
+      <button ng-click="projects.delete()" class="one-hundred">Delete</button>
+      <!-- <a ui-sref="editproject({id: project._id})" class="button one-hundred">Edit</a>  -->
+      <a ui-sref="editproject({ id: projects.project._id })" class="button one-hundred">Edit?</a>
 
       </div>
 
