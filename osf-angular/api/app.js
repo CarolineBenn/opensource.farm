@@ -9,6 +9,7 @@ var cookieParser   = require("cookie-parser");
 var methodOverride = require("method-override");
 var jwt            = require('jsonwebtoken');
 var expressJWT     = require('express-jwt');
+var moment         = require('moment');
 var app            = express();
 
 var config         = require('./config/config');

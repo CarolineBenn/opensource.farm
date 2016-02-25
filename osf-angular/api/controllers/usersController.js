@@ -24,8 +24,18 @@ function usersUpdate(req, res){
     if (err) return res.status(500).json({message: "Something went wrong!"});
     if (!user) return res.status(404).json({message: 'No user found.'});
 
-    if (req.body.email) user.local.email = req.body.name;
-    if (req.body.password) user.local.password = req.body.password;
+    if (req.body.email)      user.local.email      = req.body.name;
+    if (req.body.password)   user.local.password   = req.body.password;
+    if (req.body.username)   user.local.username   = req.body.username;
+    if (req.body.firstname)  user.local.firstname  = req.body.firstname;
+    if (req.body.surname)    user.local.surname    = req.body.surname;
+    if (req.body.occupation) user.local.occupation = req.body.occupation;
+    if (req.body.location)   user.local.location   = req.body.location;
+    if (req.body.aboutme)    user.local.aboutme    = req.body.aboutme;
+    if (req.body.github)     user.local.github     = req.body.github;
+    if (req.body.twitter)    user.local.twitter    = req.body.twitter;
+    if (req.body.facebook)   user.local.facebook   = req.body.facebook;
+    if (req.body.image)      user.local.image      = req.body.image;
 
     user.save(function(err) {
      if (err) return res.status(500).json({message: "Something went wrong!"});
