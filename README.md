@@ -4,6 +4,8 @@
 
 ### Screenshot of app
 
+
+
 ### Tech used:
 MEAN stack - MongoDB, Express, AngularJS, Node.js
 ZURB Foundation v5.3
@@ -32,5 +34,10 @@ A User must be able to delete their project should they wish to
 
 ### Wireframes
 
+![alt tag](http://nobodyknowsthisishere.co.uk/images/wireframe3.png)
+![alt tag](http://nobodyknowsthisishere.co.uk/images/wireframe2.png)
+
 ### Architecture
+
+![alt tag](http://nobodyknowsthisishere.co.uk/images/structure.png)
 
