@@ -1,10 +1,6 @@
 # opensource.farm
 
-**opensourcefarm.herokuapp.com**
-
-### Screenshot of app
-
-
+Link: **opensourcefarm.herokuapp.com**
 
 ### Tech used:
 MEAN stack - MongoDB, Express, AngularJS, Node.js
