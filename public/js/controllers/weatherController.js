@@ -8,7 +8,7 @@ function WeatherController($http){
 
   function getWeather(){
     $http
-    .get('http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/322494?res=3hourly&?key=e652296c-758b-458f-a584-d2360ae6606a')
+    .get('https://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/322494?res=3hourly&?key=e652296c-758b-458f-a584-d2360ae6606a')
     .then(function(res){
       console.log(res.data)
       console.log(res.data.SiteRep.DV.Location.Period[0].Rep[0]);
