@@ -1,5 +1,5 @@
 var Project = require("../models/project");
-var User = require("../models/user");
+var User    = require("../models/user");
 
 function projectsIndex(req, res){
   Project.find({}, function(err, projects) {

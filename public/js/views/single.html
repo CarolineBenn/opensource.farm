@@ -13,8 +13,8 @@
       <div class="medium-4 columns">
         <img id="project-main-photo" src="{{ projects.project.photos }}" alt="Main project" title="Main project photo">      
         
-<!--    Coming soon:
-       <div id="project-photo-thumbnails" class="row">
+<!--    New feature coming soon - small image gallery:
+        <div id="project-photo-thumbnails" class="row">
           <div class="small-4 columns">
             <img src="/images/tracrr.jpg" alt="Main project" title="second project photo">
           </div>
@@ -38,19 +38,13 @@
             <a href="#">Team member 03</a>
           </div>
           <hr class="hide-for-small">
-
-          <a href="http://github.com/{{ projects.project.github }}" target="_blank" class="github-link"><i class="fa fa-github"></i> Github</a>
-          
+          <a href="http://github.com/{{ projects.project.github }}" target="_blank" class="github-link"><i class="fa fa-github"></i> Github</a>          
           <hr class="hide-for-small">
-          
           <p>This project was created on 22nd Feb 2016</p>  
         </section>
-
         <hr class="show-for-small">
-
-      <button ng-click="projects.delete()" class="one-hundred">Delete</button>
-      <!-- <a ui-sref="editproject({id: project._id})" class="button one-hundred">Edit</a>  -->
-      <a ui-sref="editproject({ id: projects.project._id })" class="button one-hundred">Edit</a>
+        <button ng-click="projects.delete()" class="one-hundred">Delete</button>
+        <a ui-sref="editproject({ id: projects.project._id })" class="button one-hundred">Edit</a>
 
       </div>
 

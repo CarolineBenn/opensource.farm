@@ -168,10 +168,18 @@ text-shadow: 2px 2px 11px #222;
   text-align: left;
 }
 
+#all-projects img {
+  background: orange;
+}
 
 /* life-on-the-farm.html */
 .life-on-the-farm .row {
   margin-bottom: 0;
+}
+
+.life-on-the-farm .information {
+  padding-top: 2em;
+/*  padding-bottom: 2em;*/
 }
 
 .life-on-the-farm p:last-child {
@@ -207,6 +215,8 @@ section#all-users img.user-image {
 .medium-4.columns .user {
   height: 250px;
   background-position: center center;
+  background: orange;
+  background-size: cover;
 }
 
 @media (max-width: 640px) {
